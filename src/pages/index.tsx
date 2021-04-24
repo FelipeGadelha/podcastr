@@ -2,6 +2,7 @@ import { usePlayer } from '../contexts/PlayerContaxt';
 
 import { GetStaticProps } from 'next';
 import Image from "next/image";
+import Head from "next/head";
 import Link from "next/link";
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
@@ -33,6 +34,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
   return (
     <div className={styles.homepage}>
+      <Head></Head>
       <section className={styles.latestEpisodes}>
         <h2>Últimos lançamentos</h2>
         <ul>
